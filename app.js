@@ -2,8 +2,11 @@ const express = require('express'); //This module allows this app to respond to 
 const bodyParser = require('body-parser');
 const app = express();
 const mongoose = require( 'mongoose');
+const cors = require('cors');
 require('dotenv/config');
 
+//middlewares
+app.use(cors());
 app.use(bodyParser.json());
 
 //import routes
