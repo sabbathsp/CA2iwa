@@ -1,9 +1,10 @@
 const express = require('express'); //This module allows this app to respond to HTTP Requests, defines the routing and renders back the required content
-
+const bodyParser = require('body-parser');
 const app = express();
 const mongoose = require( 'mongoose');
 require('dotenv/config');
 
+app.use(bodyParser.json());
 
 //import routes
 const postsRoute = require('./routes/posts');
